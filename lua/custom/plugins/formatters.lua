@@ -6,7 +6,7 @@ return {
     conform.setup {
       formatters_by_ft = {
         lua = { 'stylua' },
-        python = { { 'ruff_format', { 'isort', 'black' } } },
+        python = { { 'ruff_format', 'isort', 'black' } },
         javascript = { { 'prettierd', 'prettier' } },
         typescript = { { 'prettierd', 'prettier' } },
         javascriptreact = { { 'prettierd', 'prettier' } },
