@@ -317,7 +317,9 @@ vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagn
 local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
 vim.api.nvim_create_autocmd('TextYankPost', {
   callback = function()
-    vim.highlight.on_yank()
+    vim.highlight.on_yank {
+      timeout = 800,
+    }
   end,
   group = highlight_group,
   pattern = '*',
@@ -519,6 +521,7 @@ require('which-key').register {
   ['<leader>h'] = { name = 'More git', _ = 'which_key_ignore' },
   ['<leader>r'] = { name = '[R]ename', _ = 'which_key_ignore' },
   ['<leader>s'] = { name = '[S]earch', _ = 'which_key_ignore' },
+  ['<leader>sm'] = { name = '[S]ession [M]management', _ = 'which_key_ignore' },
   ['<leader>w'] = { name = '[W]orkspace', _ = 'which_key_ignore' },
   ['<leader>l'] = { name = 'LSP', _ = 'which_key_ignore' },
   ['<leader>lc'] = { name = '[C]ode [A]ction', _ = 'which_key_ignore' },
