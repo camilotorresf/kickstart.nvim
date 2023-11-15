@@ -1,5 +1,5 @@
 -- nvim-tree
-vim.keymap.set('n', '<leader>t', ':NvimTreeFindFileToggle<cr>', { desc = '[T]ree' })
+vim.keymap.set('n', '<leader>fm', ':NvimTreeFindFileToggle<cr>', { desc = '[F]ile [M]anager' })
 
 ----------------------------------------
 -- bufferline
