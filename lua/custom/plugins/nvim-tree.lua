@@ -16,7 +16,7 @@ return {
         relativenumber = true,
       },
       filters = {
-        git_ignore = false,
+        git_ignored = false,
       },
     }
   end,
