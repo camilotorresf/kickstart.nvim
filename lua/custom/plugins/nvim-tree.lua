@@ -15,6 +15,9 @@ return {
         number = true,
         relativenumber = true,
       },
+      filters = {
+        git_ignore = false,
+      },
     }
   end,
 }

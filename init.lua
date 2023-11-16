@@ -292,6 +292,8 @@ vim.opt.spell = true
 -- line breaks
 vim.opt.wrap = true
 vim.opt.linebreak = true
+vim.opt.shiftwidth = 2
+vim.opt.tabstop = 2
 
 -- navic
 vim.o.winbar = "%{%v:lua.require'nvim-navic'.get_location()%}"
