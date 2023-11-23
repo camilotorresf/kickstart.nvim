@@ -6,7 +6,7 @@ return {
     conform.setup {
       formatters_by_ft = {
         lua = { 'stylua' },
-        python = { { 'ruff_format', 'isort', 'black' } },
+        python = { 'isort', 'black' },
         javascript = { { 'prettierd', 'prettier' } },
         typescript = { { 'prettierd', 'prettier' } },
         javascriptreact = { { 'prettierd', 'prettier' } },
@@ -18,6 +18,7 @@ return {
         yaml = { { 'prettierd', 'prettier' } },
         markdown = { { 'prettierd', 'prettier' } },
         graphql = { { 'prettierd', 'prettier' } },
+        vue = { { 'prettierd', 'prettier' } },
       },
       format_on_save = {
         lsp_fallback = true,
