@@ -295,6 +295,11 @@ vim.opt.linebreak = true
 vim.opt.shiftwidth = 2
 vim.opt.tabstop = 2
 
+vim.opt.scrolloff = 6
+
+-- Disable swap files
+vim.opt.swapfile = false
+
 -- navic
 vim.o.winbar = "%{%v:lua.require'nvim-navic'.get_location()%}"
 

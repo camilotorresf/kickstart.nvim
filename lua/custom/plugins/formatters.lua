@@ -20,10 +20,6 @@ return {
         graphql = { { 'prettierd', 'prettier' } },
         vue = { { 'prettierd', 'prettier' } },
       },
-      format_on_save = {
-        lsp_fallback = true,
-        timeout_ms = 500,
-      },
     }
 
     vim.keymap.set({ 'n', 'v' }, '<leader>lf', function()
