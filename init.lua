@@ -540,24 +540,25 @@ local on_attach = function(_, bufnr)
 end
 
 -- document existing key chains
-require('which-key').register {
-  ['<leader>c'] = { name = '[C]ode', _ = 'which_key_ignore' },
-  ['<leader>d'] = { name = '[D]ocument', _ = 'which_key_ignore' },
-  ['<leader>g'] = { name = '[G]it', _ = 'which_key_ignore' },
-  ['<leader>h'] = { name = 'More git', _ = 'which_key_ignore' },
-  ['<leader>r'] = { name = '[R]ename', _ = 'which_key_ignore' },
-  ['<leader>s'] = { name = '[S]earch', _ = 'which_key_ignore' },
-  ['<leader>sm'] = { name = '[S]ession [M]management', _ = 'which_key_ignore' },
-  ['<leader>w'] = { name = '[W]orkspace', _ = 'which_key_ignore' },
-  ['<leader>l'] = { name = 'LSP', _ = 'which_key_ignore' },
-  ['<leader>lc'] = { name = '[C]ode [A]ction', _ = 'which_key_ignore' },
-  ['<leader>lg'] = { name = '[G]oto [D]eclaration', _ = 'which_key_ignore' },
-  ['<leader>lw'] = { name = '[W]orkspace', _ = 'which_key_ignore' },
-  ['<leader>b'] = { name = '[B]ufferline', _ = 'which_key_ignore' },
-  ['<leader>bv'] = { name = '[V]isible buffers', _ = 'which_key_ignore' },
-  ['<leader>bm'] = { name = '[M]ove buffers', _ = 'which_key_ignore' },
-  ['<leader>bc'] = { name = '[C]lose [O]thers', _ = 'which_key_ignore' },
-}
+local wk = require('which-key')
+wk.add({
+  {'<leader>c', desc = '[C]ode' },
+  {'<leader>d', desc = '[D]ocument' },
+  {'<leader>g', desc = '[G]it' },
+  {'<leader>h', desc = 'More git' },
+  {'<leader>r', desc = '[R]ename' },
+  {'<leader>s', desc = '[S]earch' },
+  {'<leader>sm', desc = '[S]ession [M]management' },
+  {'<leader>w', desc = '[W]orkspace' },
+  {'<leader>l', desc = 'LSP' },
+  {'<leader>lc', desc = '[C]ode [A]ction' },
+  {'<leader>lg', desc = '[G]oto [D]eclaration' },
+  {'<leader>lw', desc = '[W]orkspace' },
+  {'<leader>b', desc = '[B]ufferline' },
+  {'<leader>bv', desc = '[V]isible buffers' },
+  {'<leader>bm', desc = '[M]ove buffers' },
+  {'<leader>bc', desc = '[C]lose [O]thers' },
+})
 
 -- mason-lspconfig requires that these setup functions are called in this order
 -- before setting up the servers.
