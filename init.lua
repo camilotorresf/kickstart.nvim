@@ -105,6 +105,7 @@ require('lazy').setup({
     dependencies = {
       -- Snippet Engine & its associated nvim-cmp source
       'L3MON4D3/LuaSnip',
+      'kmarius/jsregexp',
       'saadparwaiz1/cmp_luasnip',
 
       -- Adds LSP completion capabilities
@@ -604,7 +605,7 @@ mason_lspconfig.setup {
   ensure_installed = vim.tbl_keys(servers),
 }
 
-mason_lspconfig.setup_handlers {
+mason_lspconfig.setup {
   function(server_name)
     require('lspconfig')[server_name].setup {
       capabilities = capabilities,
