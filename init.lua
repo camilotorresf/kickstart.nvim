@@ -110,7 +110,7 @@ do
   vim.o.number = true
   -- You can also add relative line numbers, to help with jumping.
   --  Experiment for yourself to see if you like it!
-  vim.o.relativenumber = true
+  -- vim.o.relativenumber = true
 
   -- Enable mouse mode, can be useful for resizing splits for example!
   vim.o.mouse = 'a'
@@ -1024,6 +1024,8 @@ do
   --
   -- For independent modules, uncomment the convenience loader:
   require 'custom.plugins'
+  require 'custom.keymaps'
+  require 'custom.config'
   --
   -- `custom.plugins` automatically loads files from that directory, but their
   -- order is unspecified. If plugins depend on each other, keep them in the same
